@@ -1,5 +1,5 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hesap silme · Replaro</title><meta name="description" content="Replaro hesabınızı ve verilerinizi nasıl silersiniz."><link rel="icon" href="/favicon.png"><style>
+<title>Replaro — antrenman ve program uygulaması · Replaro</title><meta name="description" content="Replaro: antrenman takibi ve program yönetimi uygulaması."><link rel="icon" href="/favicon.png"><style>
 :root{--bg:#f7f7fb;--fg:#1b1b2b;--muted:#5b5b73;--card:#fff;--line:#e4e4ee;--acc:#6E63FF;--acc2:#FF5CA8}
 @media(prefers-color-scheme:dark){:root{--bg:#12101f;--fg:#ececf5;--muted:#a3a3bd;--card:#1a1730;--line:#2b2745}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
@@ -18,18 +18,51 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;paddin
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:36px 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;color:var(--fg)}
 .card small{display:block;color:var(--muted);margin-top:4px}.badge{display:inline-block;background:linear-gradient(90deg,var(--acc),var(--acc2));color:#fff;border-radius:999px;padding:6px 14px;font-size:13px;margin-top:14px}
+
+.hero{padding:56px 0 24px}.hero h1{font-size:44px;margin:12px 0 8px}.hero .lead{font-size:20px;max-width:640px;margin:0 auto 18px}
+.hero .sub{color:var(--muted);max-width:620px;margin:0 auto}
+.phones{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin:34px 0 10px}
+.phone{width:250px;border-radius:34px;background:#0c0a1e;padding:10px;box-shadow:0 30px 60px rgba(23,20,58,.28);border:1px solid #2c2860}
+.hero .phone img{width:100%;height:auto;max-width:none;margin:0;display:block;border-radius:26px;box-shadow:none}
+.phone.sm{width:210px}
+.langs{margin:36px auto;text-align:center;padding:26px 20px;border-radius:20px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff}
+.langs h2{margin:0 0 6px;font-size:28px}.langs p{margin:0 0 16px;opacity:.9}
+.langs .pill{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;margin:4px;font-weight:600}
+.sec{margin:52px 0}.sec h2{font-size:32px;text-align:center;margin:0 0 6px}.sec .intro{text-align:center;color:var(--muted);margin:0 auto 28px;max-width:640px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.feat article{background:#fff;border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;gap:16px;align-items:flex-start}
+.feat article img{width:104px;border-radius:14px;flex:none;border:1px solid var(--border)}
+.feat h3{margin:0 0 6px;font-size:18px}.feat p{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.why div{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px}.why b{display:block;font-size:17px;margin-bottom:6px}.why span{color:var(--muted);font-size:14.5px;line-height:1.5}
+.why .ic{font-size:26px;margin-bottom:8px;display:block}
+.gallery{display:flex;gap:14px;overflow-x:auto;padding:10px 4px 18px;scroll-snap-type:x mandatory}
+.gallery figure{margin:0;flex:none;width:200px;scroll-snap-align:start;text-align:center}
+.gallery img{width:100%;border-radius:22px;border:1px solid var(--border);box-shadow:0 12px 30px rgba(23,20,58,.12)}
+.gallery figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.cta{text-align:center;padding:40px 20px;border-radius:20px;background:#17143a;color:#fff;margin:48px 0 24px}.cta h2{margin:0 0 8px}.cta p{color:#c8c4eb;margin:0 0 14px}
+.legal-head{font-size:22px;text-align:center;margin:40px 0 4px}
+@media(max-width:640px){.hero h1{font-size:34px}.phone{width:200px}.phone.sm{display:none}}
 </style></head>
 <body><header><div class="wrap"><a href="/"><img src="/icon.png" alt=""></a><b>Replaro</b><nav><a href="/privacy/">Gizlilik</a><a href="/kvkk/">KVKK</a><a href="/acik-riza/">Açık Rıza</a><a href="/terms/">Koşullar</a><a href="/privacy-en/">EN</a></nav></div></header>
-<main><div class="wrap"><h1>Hesap silme</h1>
-<p>Replaro hesabınızı ve hesabınıza bağlı tüm verileri (profil, antrenmanlar, oturumlar, gelişim kayıtları, fotoğraflar, oyunlaştırma verileri) uygulama içinden kalıcı olarak silebilirsiniz.</p>
-<h2>Uygulama içinden (önerilen)</h2>
-<ol><li>Replaro'yu açın, giriş yapın.</li><li><b>Profil → Gizlilik ve veri → Hesabımı sil</b> yolunu izleyin.</li>
-<li>Güvenlik için şifrenizi yeniden girin ve onaylayın.</li></ol>
-<p>Silme işlemi anında başlar; hesap, Firebase Authentication kaydı, veritabanı belgeleri ve depolama dosyaları geri alınamaz şekilde kaldırılır. Silmeden önce <b>Profil → Gizlilik ve veri → Verilerimi dışa aktar</b> ile verilerinizin bir kopyasını (JSON) alabilirsiniz.</p>
-<h2>E-posta ile</h2>
-<p>Uygulamaya erişemiyorsanız kayıtlı e-posta adresinizden <a href="mailto:gizlilik@replaro.app?subject=Hesap%20silme%20talebi">gizlilik@replaro.app</a> adresine "Hesap silme talebi" yazın. Kimliğinizi doğruladıktan sonra en geç 30 gün içinde silinir ve size bilgi verilir.</p>
-<h2>Saklanan veriler</h2>
-<p>Silme sonrasında yalnızca yasal yükümlülük gereği saklanması gereken mağaza satın alma kayıtları (Google Play / RevenueCat tarafında) kalır; bunlar uygulama hesabınızla ilişkilendirilmez.</p>
-<hr><h2 id="en">Account deletion (English)</h2>
-<p>Delete your Replaro account and all associated data in the app: <b>Profile → Privacy &amp; data → Delete my account</b>, re-enter your password and confirm. Deletion is immediate and irreversible; export your data first if you wish.
-If you cannot access the app, email <a href="mailto:gizlilik@replaro.app?subject=Account%20deletion%20request">gizlilik@replaro.app</a> from your registered address; we delete within 30 days after verifying your identity.</p></div></main><footer><div class="wrap">© 2026 Replaro · <a href='mailto:destek@replaro.app'>destek@replaro.app</a> · KVKK başvuruları: <a href='mailto:gizlilik@replaro.app'>gizlilik@replaro.app</a></div></footer></body></html>
+<main><div class="wrap"><div class="hero"><img src="/icon.png" alt="Replaro"><h1>Replaro</h1>
+<p class="lead"><b>Bilime dayalı antrenman, cebinde.</b></p>
+<p class="sub">88 egzersiz, her biri için lisanslı 3D animasyon ve "neden bu kaslar?" açıklaması. Seviyene ve ortamına göre hazır programlar, akıllı ilerleme, 10 dil desteği.</p>
+<span class="badge">Android · yakında Google Play'de</span>
+<div class="phones"><div class="phone sm"><img src="/screens/workout.webp" alt="Program" loading="eager"></div><div class="phone"><img src="/screens/detail-pushup.webp" alt="Egzersiz detayı"></div><div class="phone sm"><img src="/screens/session-squat.webp" alt="Antrenman"></div></div></div>
+<section class="langs"><h2>🌍 10 dilde konuşur</h2><p>Arayüz, egzersiz adları, bilimsel açıklamalar ve teknik adımlar — hepsi tam çeviriyle.</p><span class="pill">Türkçe</span><span class="pill">English</span><span class="pill">Deutsch</span><span class="pill">Français</span><span class="pill">Italiano</span><span class="pill">Русский</span><span class="pill">العربية</span><span class="pill">中文</span><span class="pill">日本語</span><span class="pill">한국어</span></section>
+<section class="sec"><h2>Neler var?</h2><p class="intro">Ne yapacağını değil, neden yaptığını öğreten antrenman uygulaması.</p><div class="feat"><article><img src="/screens/session-squat.webp" alt="Her harekette 3D animasyon" loading="lazy"><div><h3>Her harekette 3D animasyon</h3><p>88 egzersizin tamamı için lisanslı, gerçek hareket videoları. Çalışan kaslar animasyonda kırmızıyla vurgulanır; stok fotoğraf değil, doğru form.</p></div></article><article><img src="/screens/detail-pushdown.webp" alt="Neden bu kaslar?" loading="lazy"><div><h3>Neden bu kaslar?</h3><p>Her egzersizin altında hangi kasın neden çalıştığını anlatan kısa bilimsel açıklama. Sadece ne yapacağını değil, neden yaptığını öğrenirsin.</p></div></article><article><img src="/screens/detail-row.webp" alt="Adım adım nasıl yapılır" loading="lazy"><div><h3>Adım adım nasıl yapılır</h3><p>Numaralı teknik adımları, ekipman, set ve tekrar bilgisi. Birincil ve ikincil kaslar etiketlerle gösterilir.</p></div></article><article><img src="/screens/workout.webp" alt="Sana uygun hazır programlar" loading="lazy"><div><h3>Sana uygun hazır programlar</h3><p>Başlangıç, orta ve ileri seviye; evde ya da salonda; haftada 2–6 gün. Onboarding sorularına göre program hazır gelir.</p></div></article><article><img src="/screens/session-pushup.webp" alt="Akıllı ilerleme" loading="lazy"><div><h3>Akıllı ilerleme</h3><p>Setlerini tekrar, ağırlık ve RIR (yedekte kalan tekrar) ile kaydet. Uygulama zorluğa göre bir sonraki hedefini önerir.</p></div></article><article><img src="/screens/badges.webp" alt="Rozetler, seviye ve kredi" loading="lazy"><div><h3>Rozetler, seviye ve kredi</h3><p>Her tamamlanan antrenman XP ve kredi kazandırır; seri ve rozetlerle motivasyon düşmez.</p></div></article><article><img src="/screens/progress.webp" alt="Gelişim takibi" loading="lazy"><div><h3>Gelişim takibi</h3><p>Kilo, vücut ölçüleri ve gelişim fotoğrafları. Sağlık verilerin yalnızca açık rızanla tutulur, istediğin an silinir.</p></div></article><article><img src="/screens/catalog.webp" alt="88 egzersiz kataloğu" loading="lazy"><div><h3>88 egzersiz kataloğu</h3><p>Kas grubu, ekipman ve seviyeye göre filtrele; favorilerine ekle, kendi programına koy.</p></div></article></div></section>
+<section class="sec"><h2>Neden Replaro?</h2><p class="intro">Piyasada yüzlerce antrenman uygulaması var. Replaro'yu farklı kılan altı şey:</p><div class="why"><div><span class="ic">🎬</span><b>Lisanslı, gerçek 3D animasyon</b><span>İnternetten toplanmış görseller yerine her hareket için profesyonel, lisanslı animasyon. Kas vurgusu form hatasını anında gösterir.</span></div><div><span class="ic">🧠</span><b>Bilime dayalı içerik</b><span>Egzersiz açıklamaları anatomi ve hareket bilimine dayanır; RIR tabanlı ilerleme modeli güçlenmeyi sürdürülebilir kılar.</span></div><div><span class="ic">🌍</span><b>10 dilde tam çeviri</b><span>Arayüz, egzersiz adları, açıklamalar ve adımlar 10 dilde. Dil, ilk açılışta seçilir ve istenildiğinde değiştirilir.</span></div><div><span class="ic">🚫</span><b>Reklam yok</b><span>Antrenman ortasında reklam çıkmaz. Ücretsiz sürüm gerçekten kullanılabilir; premium sadece ek özellik ekler.</span></div><div><span class="ic">🔒</span><b>Gizlilik önce</b><span>Veriler Avrupa'da (europe-west1) saklanır; KVKK ve GDPR uyumlu. Sağlık verileri için ayrı açık rıza, hesap silme tek dokunuş.</span></div><div><span class="ic">🏠</span><b>Ev ya da salon</b><span>Ekipmansız vücut ağırlığı programlarından dambıl, bar ve makine hareketlerine kadar her ortama uygun seçenek.</span></div></div></section>
+<section class="sec"><h2>Uygulamadan ekranlar</h2><p class="intro">Sağa kaydırarak tüm ekranları inceleyebilirsin.</p><div class="gallery"><figure><img src="/screens/home.webp" alt="Ana sayfa" loading="lazy"><figcaption>Ana sayfa</figcaption></figure><figure><img src="/screens/workout.webp" alt="Program" loading="lazy"><figcaption>Program</figcaption></figure><figure><img src="/screens/session-squat.webp" alt="Antrenman" loading="lazy"><figcaption>Antrenman</figcaption></figure><figure><img src="/screens/detail-pushup.webp" alt="Çalışan kaslar" loading="lazy"><figcaption>Çalışan kaslar</figcaption></figure><figure><img src="/screens/detail-pushdown.webp" alt="Bilimsel açıklama" loading="lazy"><figcaption>Bilimsel açıklama</figcaption></figure><figure><img src="/screens/onboarding.webp" alt="Dil seçimi" loading="lazy"><figcaption>Dil seçimi</figcaption></figure><figure><img src="/screens/progress.webp" alt="Gelişim" loading="lazy"><figcaption>Gelişim</figcaption></figure><figure><img src="/screens/badges.webp" alt="Rozetler" loading="lazy"><figcaption>Rozetler</figcaption></figure><figure><img src="/screens/favorites.webp" alt="Favoriler" loading="lazy"><figcaption>Favoriler</figcaption></figure><figure><img src="/screens/profile.webp" alt="Hedefler" loading="lazy"><figcaption>Hedefler</figcaption></figure><figure><img src="/screens/catalog.webp" alt="Katalog" loading="lazy"><figcaption>Katalog</figcaption></figure><figure><img src="/screens/session-bridge.webp" alt="Set kaydı" loading="lazy"><figcaption>Set kaydı</figcaption></figure></div></section>
+<section class="cta"><h2>Google Play'de yakında</h2><p>Kapalı test için erken erişim ister misin? Bize yaz, seni test grubuna ekleyelim.</p><a class="badge" href="mailto:destek@replaro.app?subject=Replaro%20erken%20erişim">destek@replaro.app</a></section>
+<h2 class="legal-head">Yasal belgeler</h2>
+<div class="cards">
+<a class="card" href="/privacy/">Gizlilik Politikası<small>Hangi veriler, neden, nerede</small></a>
+<a class="card" href="/kvkk/">KVKK Aydınlatma Metni<small>6698 sayılı Kanun md. 10</small></a>
+<a class="card" href="/acik-riza/">Sağlık Verisi Açık Rızası<small>Kilo, ölçü ve fotoğraflar için</small></a>
+<a class="card" href="/terms/">Kullanım Koşulları<small>Hesap, premium, sorumluluk</small></a>
+<a class="card" href="/privacy-en/">Privacy Policy (EN)<small>English version</small></a>
+<a class="card" href="/terms-en/">Terms of Service (EN)<small>English version</small></a>
+<a class="card" href="/delete-account/">Hesap silme<small>Account deletion</small></a>
+</div>
+<p style="text-align:center;color:var(--muted)">İletişim: <a href="mailto:destek@replaro.app">destek@replaro.app</a></p></div></main><footer><div class="wrap">© 2026 Replaro · <a href='mailto:destek@replaro.app'>destek@replaro.app</a> · KVKK başvuruları: <a href='mailto:gizlilik@replaro.app'>gizlilik@replaro.app</a></div></footer></body></html>
